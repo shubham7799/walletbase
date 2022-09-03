@@ -1,7 +1,7 @@
 import axios from 'axios';
 import cookie from 'react-cookies';
 
-const url = 'http://localhost:3000/contacts'
+const url = process.env.REACT_APP_URL;
 
 export const readContact=()=>axios.get(url,getConfig())
 export const writeContact=contact =>axios.post(url,contact,getConfig())

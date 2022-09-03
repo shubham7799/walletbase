@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
     res.send('Welcome to Server');
 })
 
-const PORT = process.env.port || 3000
+
 mongoose.connect(mongodb).then(
-    app.listen(3000,()=>console.log(`server is running on port ${PORT}`))
+    app.listen(process.env.PORT || 3000,()=>console.log(`server is running on port`))
 );
